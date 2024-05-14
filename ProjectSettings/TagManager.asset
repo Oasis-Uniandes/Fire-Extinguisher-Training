@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FE A
+  - FE ABC
+  - FE BC
+  - Fire A
+  - Fire ABC
+  - Fire BC
   layers:
   - Default
   - TransparentFX

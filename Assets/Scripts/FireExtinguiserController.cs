@@ -16,7 +16,7 @@ public class FireExtinguisherController : MonoBehaviour
     {
         Debug.Log("I am alive");
         part = GetComponent<ParticleSystem>();
-        extinguisherTag = this.transform.parent.transform.parent.tag;
+        extinguisherTag = this.transform.tag;
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
@@ -44,8 +44,8 @@ public class FireExtinguisherController : MonoBehaviour
 
     private bool CanExtinguish(string fireTag)
     {
-        Debug.Log(fireTag.Substring(fireTag.Length - 1));
-        Debug.Log(extinguisherTag.Substring(extinguisherTag.Length - 1));
+        Debug.Log($"My tag is: {fireTag} and my substring is: { fireTag.Substring(fireTag.Length - 1)}");
+        Debug.Log($"My tag is {extinguisherTag} and my substring is {extinguisherTag.Substring(extinguisherTag.Length - 1)}");
         return fireTag.Substring(fireTag.Length - 1) == extinguisherTag.Substring(extinguisherTag.Length - 1);
     }
 
